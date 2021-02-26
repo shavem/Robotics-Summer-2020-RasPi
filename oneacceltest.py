@@ -3,10 +3,12 @@ import math
 import time
 import os
 
-#test
 # Register
 power_mgmt_1 = 0x6b
 power_mgmt_2 = 0x6c
+
+with open("/Documents/password.txt") as f:
+    pas = f.readline()
 
 
 def read_byte(reg):
