@@ -2,6 +2,7 @@ import smbus
 import math
 import time
 
+#test
 # Register
 power_mgmt_1 = 0x6b
 power_mgmt_2 = 0x6c
