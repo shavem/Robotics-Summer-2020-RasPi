@@ -2,6 +2,8 @@ import smbus
 import math
 import time
 import os
+import pexpect
+import sys
 
 #test
 # Register
@@ -84,6 +86,13 @@ while cycle < 10:
     cycle += 1
 os.system("git add -A")
 os.system("git commit -m data")
-os.system("git push")
-os.system("Shavem")
-os.system(pas)
+child = pexpect.spawn("git push")
+child.logfile_read = sys.stdout
+child.expect("Username for 'https://github.com':")
+child.sendline("Shavem")
+child.expect("Password for 'https://Shavem@github.com':")
+child.sendline(pas)
+
+# os.system("git push")
+# os.system("Shavem")
+# os.system(pas)
