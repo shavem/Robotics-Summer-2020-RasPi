@@ -8,7 +8,7 @@ import os
 power_mgmt_1 = 0x6b
 power_mgmt_2 = 0x6c
 
-with open("/Documents/password.txt") as f:
+with open("/home/pi/Documents/password.txt") as f:
     pas = f.readline()
 
 
