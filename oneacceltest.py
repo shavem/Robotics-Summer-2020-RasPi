@@ -5,7 +5,6 @@ import os
 import pexpect
 import sys
 
-#test
 # Register
 power_mgmt_1 = 0x6b
 power_mgmt_2 = 0x6c
