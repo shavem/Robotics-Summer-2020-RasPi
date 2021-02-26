@@ -92,6 +92,7 @@ child.expect("Username for 'https://github.com':")
 child.sendline("Shavem")
 child.expect("Password for 'https://Shavem@github.com':")
 child.sendline(pas)
+child.interact()
 
 # os.system("git push")
 # os.system("Shavem")
