@@ -51,8 +51,7 @@ address = 0x68  # via i2cdetect
 
 cycle = 0
 while cycle < 10:
-    # label = raw_input("activity label: ")
-    label = 1
+    label = raw_input("activity label: ")
     f = open("data{0}.csv".format(cycle), "w")
     print("data{0}.txt printed".format(cycle))
     for i in range(1000):
