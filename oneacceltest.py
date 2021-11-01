@@ -5,6 +5,10 @@ import os
 import pexpect
 import sys
 
+
+# 1 - right
+# 2 - left
+
 # Register
 power_mgmt_1 = 0x6b
 power_mgmt_2 = 0x6c
@@ -52,8 +56,7 @@ address = 0x68  # via i2cdetect
 cycle = 0
 while cycle < 10:
     label = raw_input("activity label: ")
-    f = open("data{0}.csv".format(cycle), "w")
-    print("data{0}.txt printed".format(cycle))
+    f = open(f"data{cycle}.csv", "w")
     for i in range(1000):
         # Activate to be able to address the module
         bus.write_byte_data(address, power_mgmt_1, 0)
@@ -81,6 +84,7 @@ while cycle < 10:
         time.sleep(0.0001)
 
     f.close()
+    print(f"data{cycle}.txt printed")
     cycle += 1
 os.system("git add -A")
 os.system("git commit -m data")
